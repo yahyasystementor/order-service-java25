@@ -12,7 +12,7 @@ public class OrderController {
     @GetMapping("/order")
     public String getOrder() {
         String customer =  restTemplate
-                .getForObject("http://localhost:8080/customer", String.class);
-        return customer;
+                .getForObject("http://customer-service:8080/customer", String.class);
+        return customer + " Hello";
     }
 }
